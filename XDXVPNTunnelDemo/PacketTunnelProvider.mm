@@ -37,8 +37,8 @@
     tunnelNetworkSettings.IPv4Settings = [[NEIPv4Settings alloc] initWithAddresses:[NSArray arrayWithObjects:@XDX_NET_TUNNEL_IPADDRESS, nil]  subnetMasks:[NSArray arrayWithObjects:@XDX_NET_SUBNETMASKS, nil]];
     tunnelNetworkSettings.IPv4Settings.includedRoutes = @[[NEIPv4Route defaultRoute]];
     // 此处不可随意设置，可根据真实情况设置
-//    NEIPv4Settings *excludeRoute = [[NEIPv4Settings alloc] initWithAddresses:[NSArray arrayWithObjects:@"111.111.111.111", nil] subnetMasks:[NSArray arrayWithObjects:@XDX_NET_SUBNETMASKS, nil]];
-//    tunnelNetworkSettings.IPv4Settings.excludedRoutes = @[excludeRoute];
+    //    NEIPv4Route *excludeRoute = [[NEIPv4Route alloc] initWithDestinationAddress:@"10.12.23.90" subnetMask:@"255.255.255.255"];
+    //    tunnelNetworkSettings.IPv4Settings.excludedRoutes = @[excludeRoute];
 
     [self setTunnelNetworkSettings:tunnelNetworkSettings completionHandler:^(NSError * _Nullable error) {
         if (error == nil) {
